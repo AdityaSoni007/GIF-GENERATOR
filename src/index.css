@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* css background-image generated using https://10015.io/tools/css-background-pattern-generator */
+.background {
+  /* background-image: radial-gradient(#ffffff 2.5px, transparent 2.5px), radial-gradient(#ffffff 2.5px, transparent 2.5px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+  background-color: #b1d2ff; */
+   background-color: rgb(13, 23, 4);
+   /* linear-gradient:(45deg, blue, red); */
+
+
+  /* background-image: radial-gradient(ellipse farthest-corner at 11px 11px, #fa1919, #fa1919 50%, rgba(255, 71, 116, 0.34) 50%);
+background-size: 11px 11px;
+background-color: rgba(255, 71, 116, 0.34); */
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.navbg{
+   background-color: grey;
+}
+
+.gif-img{
+   width:73%;
+}
+
+.nav{
+   border:3px solid black;
+   box-shadow: 4px 4px black;
+}
+
+
+
+
+
+.background-image{
+   background-image:url('./background-image.jpg') ;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-position-y: -10rem;
+   /* position:stati; */
+   height: 100vh;
+   width: 100%;
+}
+
+
+.background-image-2{
+   background-image:url('./bg-3.jpg') ;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-position-y: -6rem;
+   /* position:relative; */
+   height: 100vh;
+   width: 100%;
+}
+
+
+.back{
+   object-fit: cover;
+}
+.back-text{
+   /* transform: translate(-50%,-50%); */
+}
+
+.line{
+   border:2px solid red;
+}
+
+
+
+
+.border{
+   border:3px solid white;
+   box-shadow: 4px 4px grey;
+}
+
+.spinner {
+   width: 56px;
+   height: 56px;
+   border-radius: 50%;
+   background: radial-gradient(farthest-side,#474bff 94%,#0000) top/9px 9px no-repeat,
+          conic-gradient(#0000 30%,#474bff);
+   -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+   animation: spinner-c7wet2 1s infinite linear;
+}
+
+@keyframes spinner-c7wet2 {
+   100% {
+      transform: rotate(1turn);
+   }
+}
+
+
+
+
+/*############################################################################################################## */
+
+
+
+@media screen and (max-width: 768px){
+   .random-gif{
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+   .random-gif-1{
+      width:70vw;
+   }
+
+}
+
+
+@media screen and (max-width: 570px){
+   .generate{
+      display: none;
+   }
+   .box{
+      margin-top:1rem;
+   }
+
+}

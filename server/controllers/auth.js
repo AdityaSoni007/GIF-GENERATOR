@@ -1,4 +1,5 @@
-
+const bcrypt = require("bcrypt");
+const User = require("../models/User");
 
 
 
@@ -6,7 +7,7 @@
 exports.signup = async (req, res) => {
 	try {
 
-		// Destructure fields from the request body
+		
 		const {
 			firstName,
 			lastName,
@@ -17,7 +18,7 @@ exports.signup = async (req, res) => {
 		} = req.body;
 
 
-		// Check if All Details are there or not
+		
 		if (!firstName || !lastName || !email || !password || !confirmPassword || !otp) {
 			return res.status(403).send({
 				success: false,
@@ -26,7 +27,7 @@ exports.signup = async (req, res) => {
 		}
 
 
-		// Check if password and confirm password match
+		
 		if (password !== confirmPassword) {
 			return res.status(400).json({
 				success: false,
@@ -35,7 +36,7 @@ exports.signup = async (req, res) => {
 			});
 		}
 
-		// Check if user already exists
+		
 		const existingUser = await User.findOne({ email });
 		if (existingUser) {
 			return res.status(400).json({
@@ -44,24 +45,26 @@ exports.signup = async (req, res) => {
 			});
 		}
 
-		// Find the most recent OTP for the email
+		
 		const response = await OTP.find({ email }).sort({ createdAt: -1 }).limit(1);
 		console.log(response);
 		if (response.length === 0) {
-			// OTP not found for the email
+			
 			return res.status(400).json({
 				success: false,
 				message: "The OTP is not valid",
 			});
+
+
 		} else if (otp !== response[0].otp) {
-			// Invalid OTP
+			
 			return res.status(400).json({
 				success: false,
 				message: "The OTP is not valid",
 			});
 		}
 
-		// Hash the password
+		
 		const hashedPassword = await bcrypt.hash(password, 10);
 
 		

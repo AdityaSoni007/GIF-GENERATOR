@@ -130,6 +130,8 @@ exports.login = async (req, res) => {
 
 		
 		if (await bcrypt.compare(password, user.password)) {
+
+
 			const token = jwt.sign(
 				{ email: user.email, id: user._id },
 
@@ -141,7 +143,7 @@ exports.login = async (req, res) => {
 
 			
 			user.token = token;
-			user.password = undefined;
+			
 			
 			const options = {
 				expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),

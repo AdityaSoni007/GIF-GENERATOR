@@ -1,0 +1,24 @@
+Testing Backend APIs
+
+1. sendotp route
+
+{"email":"chaman.soni72@gmail.com"}
+
+
+
+2. signup route
+
+{"firstName":"Adi",
+  "lastName":"soni",
+  "email":"chaman.soni72@gmail.com",
+  "password":"123456",
+  "confirmPassword":"123456",
+  "otp":"225233"}
+
+
+
+3. login route
+
+{"email":"chaman.soni72@gmail.com",
+ "password":"123456"}
+

@@ -30,15 +30,10 @@ const Random = ({user,isAuthenticated}) => {
 
       {isAuthenticated?(<div className='w-10/12 flex gap-4 '>
         <button onClick={() => fetchData()}
-          className="w-5/6 border-[3px] border-black  bg-yellow-500 lg:text-xl py-2 rounded-lg mb-[20px] font-semibold ">
+          className="w-5/6 border-[3px] border-black  bg-yellow-500 lg:text-xl py-2 rounded-lg mb-[20px] font-semibold ">Generate 👆🏾</button>
 
-          
-
-          Generate 👆🏾
-
-        </button>
-        <button onClick={handleClick}  className='w-1/6  flex items-center justify-center py-2  font-semibold  bg-white border-[3px] border-black sm:text-[30px] text-red-700 rounded-lg mb-[20px] '> {favorite?(<MdOutlineFavorite/>):(<MdOutlineFavoriteBorder />)}</button>
-      </div>)
+        <button onClick={handleClick}  className='w-1/6  flex items-center justify-center py-2  font-semibold  bg-white border-[3px] border-black sm:text-[30px] text-red-700 rounded-lg mb-[20px] '> {favorite?(<MdOutlineFavorite/>):(<MdOutlineFavoriteBorder />)}</button></div>)
+        
       :(<button onClick={() => fetchData()}
           className="w-10/12 border-[3px] border-black  bg-yellow-500 lg:text-xl py-2 rounded-lg mb-[20px] font-semibold "> Generate 👆🏾</button>)}
 

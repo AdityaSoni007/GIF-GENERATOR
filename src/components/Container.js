@@ -10,14 +10,14 @@ function Container({ user, isAuthenticated, logout, loginWithRedirect }) {
 
                 <div className='bg-white h-[auto] rounded-3xl flex items-center justify-between w-[70%]  nav '>
 
-                    <h1 className='text-black font-semibold text-lg ml-5'><Link to='/'>GIFS Generator </Link></h1>
+                    <h1 className='text-black font-semibold lg:text-lg ml-5'><Link to='/'>GIFS Generator </Link></h1>
                    
                     <div className='flex gap-x-6 mr-3'>
 
                     {
                         (!isAuthenticated) ?
                             (<button onClick={() => loginWithRedirect()}
-                                className='border-700 px-[20px] py-[8px] text-black rounded-2xl font-semibold hover:scale-90 transition duration-150 ease-out hover:ease-out'> Login </button>
+                                className=' px-[20px] py-[8px] text-black rounded-2xl font-semibold hover:scale-90 transition duration-150 ease-out hover:ease-out'> Login </button>
 
                             ) :
 
@@ -25,6 +25,7 @@ function Container({ user, isAuthenticated, logout, loginWithRedirect }) {
                     }
 
                     </div>
+                    
 
 
                 </div>
@@ -41,8 +42,8 @@ function Container({ user, isAuthenticated, logout, loginWithRedirect }) {
                     </p>
                 </div>
 
-                <div className='  w-[25%] flex  justify-center items-center generate '>
-                    <button className='flex items-center justify-center gap-1 bg-white text-black lg:text-xl font-semibold p-2 sm:text-[1rem] rounded-3xl w-[100%] nav hover:scale-90 transition duration-150 ease-out hover:ease-out'> Generate 👆🏾
+                <div className='  w-[15vw] flex  justify-center items-center generate '>
+                    <button onClick={() => loginWithRedirect()} className='flex items-center justify-center gap-1 bg-white text-black lg:text-lg font-semibold p-2 sm:text-[1rem] rounded-3xl w-[100%] nav hover:scale-90 transition duration-150 ease-out hover:ease-out'> Generate 👆🏾
                         
                     </button>
                 </div>

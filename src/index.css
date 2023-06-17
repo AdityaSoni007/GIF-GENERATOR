@@ -68,9 +68,7 @@ background-color: rgba(255, 71, 116, 0.34); */
 .back{
    object-fit: cover;
 }
-.back-text{
-   /* transform: translate(-50%,-50%); */
-}
+
 
 .line{
    border:2px solid red;
